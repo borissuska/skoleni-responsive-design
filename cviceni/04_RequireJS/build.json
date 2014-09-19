@@ -1,0 +1,22 @@
+{
+    "keepBuildDir": true,
+    "dir": "dist",
+    "appDir": "app",
+    "mainConfigFile": "app/main.js",
+
+    "modules": [
+        {
+            "name": "app",
+            "create": true,
+            "include": ["../../node_modules/almond/almond", "module-A"]
+        }
+    ],
+
+    "optimize": "none",
+    "wrap": {
+        "start": "(function() {",
+        "end": "require('module-A');}());"
+    },
+    "removeCombined": true,
+    "fileExclusionRegExp": "/^\\.|main.js|/"
+}

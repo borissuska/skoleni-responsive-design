@@ -1,0 +1,9 @@
+{
+  "name": "app",
+  "version": "0.0.0",
+  "dependencies": {
+  },
+  "devDependencies": {
+    "almond": "^0.2.9"
+  }
+}

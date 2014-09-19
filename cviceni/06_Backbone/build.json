@@ -1,0 +1,44 @@
+{
+    "appDir": "js",
+    "mainConfigFile": "js/main.js",
+    "dir": "dist",
+
+    //Comment out the optimize line if you want
+    //the code minified by UglifyJS
+    "optimize": "uglify2", // "none" - no minification will be done
+
+    "optimizeCss": "standard",
+
+    "modules": [
+        //Optimize the application files. jQuery and the plugins will be included
+        //automatically, as they are dependencies of app.js.
+        {
+            "name": "app",
+            "include": [
+            ]
+        },
+        {
+            "name": "libs",
+            "create": true,
+            "include": [
+            ]
+        },
+        {
+            "name": "page/Index",
+            "exclude": ["app", "libs"]
+        }
+    ],
+
+    "paths": {
+        "handlebars-compiler": "libs/handlebars/handlebars-v1.3.0",
+        "handlebars": "libs/handlebars/handlebars.runtime-v1.3.0",
+        "jquery": "empty:",
+        "jquery-ui": "empty:",
+        "underscore": "empty:",
+        "backbone": "empty:",
+        "bootstrap": "empty:"
+    },
+
+    "removeCombined": false,
+    "fileExclusionRegExp": "/^\\.|\\.less$|\\.map$|\\.min\\.css$|\\.psd$|bower.json|/"
+}
